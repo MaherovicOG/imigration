@@ -1,0 +1,252 @@
+export interface CityData {
+  name: string;
+  slug: string;
+  stateCode: string;
+  stateName: string;
+  metroPopulation: number;
+  costOfLivingIndex: number;
+  medianHomePrice: number;
+  medianMonthlyRent: number; // 2-bedroom
+  medianHouseholdIncome: number;
+  avgCommuteMinutes: number;
+  transitScore: number;
+  walkScore: number;
+  sunnyDays: number;
+  avgSummerHigh: number;
+  avgWinterLow: number;
+  topIndustries: string[];
+  vibeSummary: string;
+}
+
+export const CITIES_DATA: Record<string, CityData> = {
+  'los-angeles': {
+    name: 'Los Angeles',
+    slug: 'los-angeles',
+    stateCode: 'CA',
+    stateName: 'California',
+    metroPopulation: 9829544,
+    costOfLivingIndex: 149.2,
+    medianHomePrice: 890000,
+    medianMonthlyRent: 2750,
+    medianHouseholdIncome: 76244,
+    avgCommuteMinutes: 32.1,
+    transitScore: 53,
+    walkScore: 69,
+    sunnyDays: 284,
+    avgSummerHigh: 84,
+    avgWinterLow: 49,
+    topIndustries: ['Entertainment', 'Aerospace', 'Fashion & Apparel', 'Tech & Digital Media', 'International Trade'],
+    vibeSummary: 'Sun-soaked creative capital with sprawling distinct neighborhoods, coastal beaches, and massive cultural influence.'
+  },
+  'san-francisco': {
+    name: 'San Francisco',
+    slug: 'san-francisco',
+    stateCode: 'CA',
+    stateName: 'California',
+    metroPopulation: 4623000,
+    costOfLivingIndex: 179.8,
+    medianHomePrice: 1250000,
+    medianMonthlyRent: 3100,
+    medianHouseholdIncome: 126187,
+    avgCommuteMinutes: 34.7,
+    transitScore: 80,
+    walkScore: 89,
+    sunnyDays: 259,
+    avgSummerHigh: 71,
+    avgWinterLow: 46,
+    topIndustries: ['Venture Capital & Tech', 'AI & Machine Learning', 'Biotech', 'Finance', 'Tourism'],
+    vibeSummary: 'Global center of tech innovation and venture capital packed into dense, hilly, architectural neighborhoods with cool maritime fog.'
+  },
+  'austin': {
+    name: 'Austin',
+    slug: 'austin',
+    stateCode: 'TX',
+    stateName: 'Texas',
+    metroPopulation: 2421115,
+    costOfLivingIndex: 101.2,
+    medianHomePrice: 485000,
+    medianMonthlyRent: 1680,
+    medianHouseholdIncome: 86556,
+    avgCommuteMinutes: 24.8,
+    transitScore: 34,
+    walkScore: 42,
+    sunnyDays: 228,
+    avgSummerHigh: 97,
+    avgWinterLow: 41,
+    topIndustries: ['Technology (Silicon Hills)', 'Higher Education', 'Music & Live Events', 'Clean Energy', 'State Government'],
+    vibeSummary: 'Dynamic live-music mecca and booming tech hub known for food trucks, hill country lakes, and no state income tax.'
+  },
+  'dallas': {
+    name: 'Dallas',
+    slug: 'dallas',
+    stateCode: 'TX',
+    stateName: 'Texas',
+    metroPopulation: 7943685,
+    costOfLivingIndex: 99.4,
+    medianHomePrice: 385000,
+    medianMonthlyRent: 1540,
+    medianHouseholdIncome: 75600,
+    avgCommuteMinutes: 27.3,
+    transitScore: 39,
+    walkScore: 46,
+    sunnyDays: 234,
+    avgSummerHigh: 96,
+    avgWinterLow: 37,
+    topIndustries: ['Corporate Headquarters', 'Finance & Banking', 'Telecommunications', 'Logistics', 'Aviation'],
+    vibeSummary: 'Major corporate powerhouse with cosmopolitan dining, high-end shopping, robust suburban school districts, and low taxes.'
+  },
+  'houston': {
+    name: 'Houston',
+    slug: 'houston',
+    stateCode: 'TX',
+    stateName: 'Texas',
+    metroPopulation: 7340118,
+    costOfLivingIndex: 94.8,
+    medianHomePrice: 310000,
+    medianMonthlyRent: 1420,
+    medianHouseholdIncome: 60440,
+    avgCommuteMinutes: 29.5,
+    transitScore: 36,
+    walkScore: 48,
+    sunnyDays: 204,
+    avgSummerHigh: 94,
+    avgWinterLow: 45,
+    topIndustries: ['Energy & Oil/Gas', 'Healthcare (Texas Medical Center)', 'Aerospace (NASA)', 'International Shipping'],
+    vibeSummary: 'Incredibly diverse global hub featuring world-class medical facilities, celebrated culinary diversity, and very affordable real estate.'
+  },
+  'miami': {
+    name: 'Miami',
+    slug: 'miami',
+    stateCode: 'FL',
+    stateName: 'Florida',
+    metroPopulation: 6138333,
+    costOfLivingIndex: 122.3,
+    medianHomePrice: 580000,
+    medianMonthlyRent: 2550,
+    medianHouseholdIncome: 54848,
+    avgCommuteMinutes: 30.8,
+    transitScore: 57,
+    walkScore: 77,
+    sunnyDays: 248,
+    avgSummerHigh: 90,
+    avgWinterLow: 60,
+    topIndustries: ['Finance & Wealth Management', 'International Commerce', 'Tourism & Hospitality', 'Real Estate', 'Crypto/Web3'],
+    vibeSummary: 'Vibrant bilingual tropical metropolis with stunning oceanfront skyscrapers, bustling nightlife, and Wall Street South influx.'
+  },
+  'orlando': {
+    name: 'Orlando',
+    slug: 'orlando',
+    stateCode: 'FL',
+    stateName: 'Florida',
+    metroPopulation: 2764182,
+    costOfLivingIndex: 104.1,
+    medianHomePrice: 380000,
+    medianMonthlyRent: 1720,
+    medianHouseholdIncome: 65184,
+    avgCommuteMinutes: 28.1,
+    transitScore: 33,
+    walkScore: 41,
+    sunnyDays: 233,
+    avgSummerHigh: 92,
+    avgWinterLow: 50,
+    topIndustries: ['Tourism & Hospitality', 'Modeling & Simulation Defense', 'Aviation & Aerospace', 'Healthcare'],
+    vibeSummary: 'Global tourism capital evolving into a fast-growing tech and simulation hub with family-friendly suburbs and zero state income tax.'
+  },
+  'phoenix': {
+    name: 'Phoenix',
+    slug: 'phoenix',
+    stateCode: 'AZ',
+    stateName: 'Arizona',
+    metroPopulation: 5015678,
+    costOfLivingIndex: 103.8,
+    medianHomePrice: 435000,
+    medianMonthlyRent: 1620,
+    medianHouseholdIncome: 72740,
+    avgCommuteMinutes: 26.2,
+    transitScore: 36,
+    walkScore: 41,
+    sunnyDays: 299,
+    avgSummerHigh: 106,
+    avgWinterLow: 45,
+    topIndustries: ['Semiconductor Manufacturing', 'Healthcare & Bioscience', 'Financial Services', 'Aerospace', 'Tourism'],
+    vibeSummary: 'Fast-expanding desert Silicon Valley with resort-style living, mountainous hiking trails right in town, and warm winter days.'
+  },
+  'seattle': {
+    name: 'Seattle',
+    slug: 'seattle',
+    stateCode: 'WA',
+    stateName: 'Washington',
+    metroPopulation: 4034248,
+    costOfLivingIndex: 147.6,
+    medianHomePrice: 815000,
+    medianMonthlyRent: 2380,
+    medianHouseholdIncome: 110820,
+    avgCommuteMinutes: 28.9,
+    transitScore: 60,
+    walkScore: 74,
+    sunnyDays: 152,
+    avgSummerHigh: 79,
+    avgWinterLow: 37,
+    topIndustries: ['Cloud Computing & Software', 'E-Commerce', 'Aerospace', 'Global Health & Life Sciences', 'Maritime Trade'],
+    vibeSummary: 'High-income Pacific Northwest jewel nestled between Puget Sound and Mount Rainier, celebrated for coffee culture and lush nature.'
+  },
+  'new-york-city': {
+    name: 'New York City',
+    slug: 'new-york-city',
+    stateCode: 'NY',
+    stateName: 'New York',
+    metroPopulation: 19571216,
+    costOfLivingIndex: 168.4,
+    medianHomePrice: 795000,
+    medianMonthlyRent: 3450,
+    medianHouseholdIncome: 76607,
+    avgCommuteMinutes: 41.2,
+    transitScore: 89,
+    walkScore: 88,
+    sunnyDays: 224,
+    avgSummerHigh: 84,
+    avgWinterLow: 27,
+    topIndustries: ['Global Finance & Banking', 'Media & Publishing', 'Tech & Startups', 'Fashion', 'Arts & Theatre', 'Legal Services'],
+    vibeSummary: 'The world’s supreme 24/7 metropolis with unparalleled cultural energy, pedestrian-first walkability, and limitless career ambition.'
+  },
+  'chicago': {
+    name: 'Chicago',
+    slug: 'chicago',
+    stateCode: 'IL',
+    stateName: 'Illinois',
+    metroPopulation: 9406638,
+    costOfLivingIndex: 107.1,
+    medianHomePrice: 340000,
+    medianMonthlyRent: 1920,
+    medianHouseholdIncome: 71673,
+    avgCommuteMinutes: 34.5,
+    transitScore: 65,
+    walkScore: 77,
+    sunnyDays: 189,
+    avgSummerHigh: 84,
+    avgWinterLow: 22,
+    topIndustries: ['Financial Trading & Commodities', 'Manufacturing & Logistics', 'Healthcare', 'Corporate Headquarters', 'Tech'],
+    vibeSummary: "Architectural masterpiece on Lake Michigan with distinct neighborhood identities, celebrated food culture, and extensive 'L' transit."
+  },
+  'las-vegas': {
+    name: 'Las Vegas',
+    slug: 'las-vegas',
+    stateCode: 'NV',
+    stateName: 'Nevada',
+    metroPopulation: 2317052,
+    costOfLivingIndex: 102.5,
+    medianHomePrice: 420000,
+    medianMonthlyRent: 1560,
+    medianHouseholdIncome: 67340,
+    avgCommuteMinutes: 24.9,
+    transitScore: 34,
+    walkScore: 42,
+    sunnyDays: 294,
+    avgSummerHigh: 104,
+    avgWinterLow: 39,
+    topIndustries: ['Hospitality & Entertainment', 'Gaming & Conventions', 'Tech & Data Centers', 'Logistics', 'Healthcare'],
+    vibeSummary: 'World-famous entertainment capital with no state income tax, low property taxes, vibrant dining, and master-planned suburban communities.'
+  }
+};
+
+export const ALL_CITIES_LIST = Object.values(CITIES_DATA);
